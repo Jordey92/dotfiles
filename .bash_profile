@@ -1,5 +1,5 @@
 export CLICOLOR=1
-export PS1='\e[32mpatrick \e[33m\w\e[35m $(git-ps1 "[%s] ")\e[0m\$ '
+export PS1='\e[32mjordan \e[33m\w\e[35m $(git-ps1 "[%s] ")\e[0m\$ '
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 source ~/.bashrc
