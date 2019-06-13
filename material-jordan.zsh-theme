@@ -1,6 +1,6 @@
 
 PROMPT='
-%{$fg[green]%}patrick %{$fg_bold[cyan]%}%~%{$FG[006]%}%B$(git_prompt_info) %{$reset_color%}
+%{$fg[green]%}Jordan %{$fg_bold[cyan]%}%~%{$FG[006]%}%B$(git_prompt_info) %{$reset_color%}
 ❯ '
 
 # Customize git_prompt_info
