@@ -5,7 +5,6 @@ ZSH_THEME="material-jordan";
 plugins=(
   git
   pip
-  cargo
   npm
   nvm
 )
