@@ -7,8 +7,8 @@ brew tap caskroom/versions
 
 # CLI basics
 brew install git curl wget jq
-git config --global user.name "Patrick Menlove"
-git config --global user.email "patmenlove@gmail.com"
+git config --global user.name "Jordan Dey"
+git config --global user.email "jordan@jordandey.com"
 
 # ZSH & iTerm
 brew install zsh
@@ -19,7 +19,7 @@ if [ "$SHELL" != "/bin/zsh" ]; then
 fi
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-cp -i material-patrick.zsh-theme ~/.oh-my-zsh/custom/themes/
+cp -i material-jordan.zsh-theme ~/.oh-my-zsh/custom/themes/
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/zsh-syntax-highlighting
 
 if ! [ -f ~/.iterm2_shell_integration.zsh ]; then
@@ -72,28 +72,13 @@ brew install terraform
 
 # LastPass cli
 brew install lastpass-cli
-lpass login --trust patrickmenlove@hotmail.co.uk
+lpass login --trust jordan@jordandey.com
 
 # SSH KEYS
 mkdir -p ~/.ssh
 
-if ! [ -f ~/.ssh/id_rsa ]; then
-  lpass show --notes 1544556513467781929 > ~/.ssh/id_rsa
-fi
-chmod 600 ~/.ssh/id_rsa
-
-if ! [ -f ~/.ssh/id_rsa.pub ]; then
-  lpass show --notes 666179570102873445 > ~/.ssh/id_rsa.pub
-fi
-chmod 600 ~/.ssh/id_rsa.pub
-
 # GPG KEYS
 brew cask install gpg-suite
-echo "S" | lpass show 5422875641318947951 --attach att-5422875641318947951-1
-gpg --import githubkey.asc
-rm githubkey.asc
-git config --global commit.gpgsign true
-git config --global user.signingkey B21F8BBC6E7335EF4C7B0BD8C2BB893186B3E679
 
 # AWS access / keys
 brew install awscli
